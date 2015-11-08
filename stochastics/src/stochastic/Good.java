@@ -5,10 +5,11 @@ public class Good {
 	protected static int index = 1;
 	int id;
 	String name;
-	int minPrice;
-	int averagePrice;
+	float minPrice;
+	float averagePrice;
+	float price;
 	
-	public Good(String name, int minPrice, int averagePrice) {
+	public Good(String name, float minPrice, float averagePrice) {
 		super();
 		this.id = index++;
 		this.name = name;
@@ -16,37 +17,71 @@ public class Good {
 		this.averagePrice = averagePrice;
 	}
 
+
+
+	@Override
+	public String toString() {
+		return "Good [id=" + id + ", name=" + name + ", minPrice=" + minPrice + ", averagePrice=" + averagePrice + "]";
+	}
+
+
+
 	public String getName() {
 		return name;
 	}
+
+
 
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	public int getMinPrice() {
+
+
+	public float getMinPrice() {
 		return minPrice;
 	}
 
-	public void setMinPrice(int minPrice) {
+
+
+	public void setMinPrice(float minPrice) {
 		this.minPrice = minPrice;
 	}
 
-	public int getAveragePrice() {
+
+
+	public float getAveragePrice() {
 		return averagePrice;
 	}
 
-	public void setAveragePrice(int averagePrice) {
+
+
+	public void setAveragePrice(float averagePrice) {
 		this.averagePrice = averagePrice;
 	}
 
-	public int getId() {
-		return id;
+
+
+	public float getPrice() {
+		return price;
 	}
 
-	@Override
-	public String toString() {
-		return "Good [id=" + id + ", name=" + name + ", minPrice=" + minPrice + ", averagePrice=" + averagePrice + "]";
+
+
+	public void setPrice(float price) {
+		this.price = price;
+	}
+
+
+
+	public static int getIndex() {
+		return index;
+	}
+
+
+
+	public int getId() {
+		return id;
 	}
 
 	

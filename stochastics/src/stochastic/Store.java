@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Store {
-	public Store(int id, String name) {
+	public Store(String name) {
 		super();
-		this.id = id;
+		this.id = index++;
 		this.name = name;
 	}
 	protected static int index = 1;
@@ -27,6 +27,9 @@ public class Store {
 	}
 	public Map<Integer, Float> getGoods() {
 		return goods;
+	}
+	public void addGood(Good g, float price){
+		goods.put(g.getId(), price);
 	}
 	
 }

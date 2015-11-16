@@ -33,5 +33,12 @@ public class algo {
 		int[][] distance = new int[storeList.size()][storeList.size()];
 		
 		distance[1][0]=distance[0][1]=4; //distance between 0 and 1
+		
+		/* initial destination */
+		
+		double r = Math.random();
+		int d0 =  (int)(r/(1/storeList.size()));
+		
+		
 	}
 }
